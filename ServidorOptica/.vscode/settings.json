@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\jucar\\Documents\\Proyects\\Servidor Optica\\ENTORNO\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\jucar\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.banditEnabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black"
 }
