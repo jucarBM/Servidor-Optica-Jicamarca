@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optics ROJ</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -12,7 +14,7 @@
 <body id="body">
     <header class="header" id="header">
         <figure class="logo">
-            <img src="images/IGP.png" alt="igp">
+            <img src="{% static 'images/IGP.png' %}" alt="igp">
         </figure>
         <nav class="menu">
             <ol>
@@ -38,7 +40,7 @@
         </nav>
     </header>
         <section class="hero" id="home">
-                <img class="hero-image" src="images/background.png" alt="roj">
+                <img class="hero-image" src="{% static 'images/background.png' %}" alt="roj">
                 <div class="hero-title">
                     <h1>OPTICS</h1>
                     <h2>Jicamarca Radio Observatory</h2>
