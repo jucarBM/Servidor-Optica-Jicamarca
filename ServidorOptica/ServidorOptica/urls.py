@@ -9,7 +9,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   # path('users/', include(('users.urls','users'), namespace='users')),
+    path('users/', include(('users.urls','users'), namespace='users')),
    # path('data/', include(('users.urls','users'), namespace='data')),
    path('', include(('home.urls', 'home'), namespace='home')),
 

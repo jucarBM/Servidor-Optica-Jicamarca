@@ -1,52 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
+{% extends "base.html"%}
+{% load static %}
+{% block content%}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optics ROJ</title>
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-</head>
-<body id="body">
-    <header class="header" id="header">
-        <figure class="logo">
-            <img src="{% static 'images/IGP.png' %}" alt="igp">
-        </figure>
-        <nav class="menu">
-            <ol>
-                <li class="link">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="link">
-                    <a href="#instruments">Instruments</a>
-                </li>
-                <li class="link">
-                    <a href="#database">Database</a>
-                </li>
-                <li class="link menu-contact">
-                    <a href="#contact">Contact Us</a>
-                </li>
-            </ol>
-            <strong class="separation">
-                    |
-            </strong>
-            <a href="#" class="login-button">
-                Login
-            </a>
-        </nav>
-    </header>
-        <section class="hero" id="home">
+<section class="hero" id="home">
                 <img class="hero-image" src="{% static 'images/background.png' %}" alt="roj">
                 <div class="hero-title">
                     <h1>OPTICS</h1>
                     <h2>Jicamarca Radio Observatory</h2>
                 </div>
-        </section>
-        <section class="about-us">
+</section>
+<section class="about-us">
             <div class="about-text">
                 <h3>
                     About Us
@@ -62,16 +25,16 @@
                 </p>
             </div>
             <div class="about-image">
-                <img src="images/red_fpi.png" alt="map-fpi">
+                <img src="{% static 'images/red_fpi.png' %}" alt="map-fpi">
             </div>
-        </section>
-        <section class="instruments" id="instruments">
+</section>
+<section class="instruments" id="instruments">
             <h3>Instruments</h3>
             <div class="intruments-container">
                 <span><</span>
                     <div class="item">
                         <figure>
-                        <img src="images/instrument.png" alt="instruments">
+                        <img src="{% static 'images/instrument.png' %}" alt="instruments">
                         <span>FPI</span>
                         </figure>
                         <div class="instrument-footer">
@@ -80,7 +43,7 @@
                     </div>
                     <div class="item">
                         <figure>
-                        <img src="images/instrument.png" alt="instruments">
+                        <img src="{% static 'images/instrument.png' %}" alt="instruments">
                         <span>FPI</span>
                         </figure>
                         <div class="instrument-footer">
@@ -89,7 +52,7 @@
                     </div>
                     <div class="item">
                         <figure>
-                        <img src="images/instrument.png" alt="instruments">
+                        <img src="{% static 'images/instrument.png' %}" alt="instruments">
                         <span>FPI</span>
                         </figure>
                         <div class="instrument-footer">
@@ -98,8 +61,8 @@
                     </div>
                 <span>></span>
             </div>
-        </section>
-        <section class="database" id="database">
+</section>
+<section class="database" id="database">
             <h3>Database</h3>
             <div class="database-container">
                 <div class="column-database column-type">
@@ -109,7 +72,7 @@
                 </div>
                 <div class="column-database column-instrument">
                     <h4>Instrument</h4>
-                    <a href="#" class="button">MRHr</a>
+                    <a href="#" class="button">MRH</a>
                     <a href="#" class="button">A3O</a>
                     <a href="#" class="button">NZK</a>
                 </div>
@@ -135,8 +98,8 @@
                     <p>Data available <span>Show Results</span></p>
                 </div>
             </div>
-        </section>
-        <section class="contact" id="contact">
+</section>
+<section class="contact" id="contact">
             <h3>
                 Contact Us
             </h3>
@@ -147,8 +110,8 @@
                     </h4>
                     <ol>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Instrument</a></li>
-                        <li><a href="#">Database</a></li>
+                        <li><a href="#instruments">Instrument</a></li>
+                        <li><a href="#database">Database</a></li>
                         <li><a href="#">Sign in</a></li>
                         <li><a href="#">Sign up</a></li>
                     </ol>
@@ -158,7 +121,7 @@
                         Social Media
                     </h4>
                     <div class="socialsection">
-                        <p><img class="img-fb" src="images/fb.png" alt="fb"><img src="images/tt.png" alt="tt"><img src="images/yt.png" alt="yt"></p>
+                        <p><img class="img-fb" src="{% static 'images/fb.png' %}" alt="fb"><img src="{% static 'images/tt.png' %}"" alt="tt"><img src="{% static 'images/yt.png' %}" alt="yt"></p>
                         <p class="contact-adress">Calle Badajoz N° 169 Urb. Mayorazgo IV Etapa <br>
                         Ate, Lima 15012 - Perú. <br>
                         (51) 13172300</p>
@@ -172,23 +135,23 @@
                     </form>
                 </div>
             </div>
-        </section>
-        <footer class="footer">
-            <p class="quote">Instituto Geofísico del Perú, Ciencia para protegernos, ciencia para avanzar.</p>
-            <p class="copyright">Copyright Jicamarca Radio Observatory</p>
-        </footer>
+</section>
+
+{% endblock%}
+
+{%block script%}
     <script>
         window.onscroll = function () { myFunction() };
 
         function myFunction() {
-            if ( document.documentElement.scrollTop > 50) {
+            if (document.documentElement.scrollTop > 50) {
                 document.getElementById("header").classList.add("header-activate");
-            } else{
-                 document.getElementById("header").classList.remove("header-activate");               
+            } else {
+                document.getElementById("header").classList.remove("header-activate");
             }
             console.log(document.documentElement.scrollTop)
             console.log(document.documentElement.scrollTop > 50)
         }
     </script>
-    </body>
-</html>
+{% endblock %}
+
