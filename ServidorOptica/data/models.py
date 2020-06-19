@@ -17,7 +17,7 @@ class Instrument(models.Model):
     description = models.TextField(("Description of the instrument"))
     instrumentType = models.CharField(("Instrument Type"), max_length=50)
     stationID = models.ForeignKey(Station, verbose_name=("Station Name"), on_delete=models.CASCADE)
-    models.ImageField(("Instrument Image"), upload_to='data/instruments', height_field=None, width_field=None, max_length=None)
+    instrumentImage = models.ImageField(("Instrument Image"), upload_to='data/instruments', blank=False)
 
     def __str__(self):
         return self.instrumentName
