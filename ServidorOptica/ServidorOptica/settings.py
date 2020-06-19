@@ -25,7 +25,7 @@ SECRET_KEY = '@&fjub-0$y=8l(l3%58z1=x@&2^o%f%@z^bg4$%(2bj*$=&6xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '192.168.1.9', '100.76.121.123']
 
 
 # Application definition
@@ -59,7 +59,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            os.path.join(BASE_DIR, 'Templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'database',
         'USER': 'jucar',
-        'PASSWORD': 'Marley919293',
+        'PASSWORD': 'marley999',
         'HOST': 'localhost',
         'PORT': '',
     }
