@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -76,7 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ServidorOptica.wsgi.application'
 
 
-# Database
+# Databasepython
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
@@ -102,8 +102,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'HOST': '127.0.0.1',
-            'PORT': '3307',
+            'HOST': '34.69.50.50',
             'NAME': 'database',
             'USER': 'jucar',
             'PASSWORD': 'Marley919293',
@@ -173,3 +172,4 @@ MEDIA_URL = '/media/'
 LOGIN_URL = '/users/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = LOGIN_URL
+django_heroku.settings(locals())ls
